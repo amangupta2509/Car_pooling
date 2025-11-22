@@ -1,7 +1,5 @@
-# Learn more: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
 # -------------------------------------------------
-# Dependencies
+# Node / Dependencies
 # -------------------------------------------------
 node_modules/
 
@@ -9,24 +7,32 @@ node_modules/
 # Expo / React Native Builds
 # -------------------------------------------------
 .expo/
+.expo-shared/
 dist/
 web-build/
+android/
+ios/
+build/
 expo-env.d.ts
 
 # -------------------------------------------------
-# Native Credentials / Signing Keys
+# Environment / Secrets
 # -------------------------------------------------
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+.env
+.env*.local
 
 # -------------------------------------------------
-# Metro Bundler
+# System Files
 # -------------------------------------------------
-.metro-health-check*
+.DS_Store
+Thumbs.db
+*.pem
+
+# -------------------------------------------------
+# IDE / Editor Config
+# -------------------------------------------------
+.vscode/
+.idea/
 
 # -------------------------------------------------
 # Debug Logs
@@ -36,23 +42,35 @@ yarn-debug.*
 yarn-error.*
 
 # -------------------------------------------------
-# macOS System Files
+# Metro Bundler Cache
 # -------------------------------------------------
-.DS_Store
-*.pem
+.metro-health-check*
+**/metro-cache/
 
 # -------------------------------------------------
-# Environment / Secrets
-# -------------------------------------------------
-.env*.local
-
-# -------------------------------------------------
-# TypeScript
+# Temporary / Generated Files
 # -------------------------------------------------
 *.tsbuildinfo
+*.log
 
 # -------------------------------------------------
-# Additional Files as Requested
+# Native Signing & Credentials
+# -------------------------------------------------
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# -------------------------------------------------
+# Tests & Coverage
+# -------------------------------------------------
+coverage/
+*.lcov
+
+# -------------------------------------------------
+# User Requested Ignores
 # -------------------------------------------------
 *.py     # Ignore all Python files
 *.pdf    # Ignore all PDF files
